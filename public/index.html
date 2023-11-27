@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volcano Bingo</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="banner">
+        <h1>ERUPT!</h1>
+        <h2>Volcano Disaster Movie Bingo</h2>
+    </div>
+    <div class="cardbox">
+        <div class="card">
+            <div class="square header">E</div>
+            <div class="square header">R</div>
+            <div class="square header">U</div>
+            <div class="square header">P</div>
+            <div class="square header">T</div>
+            <div class="square e row1 corner diagonal1"></div>
+            <div class="square r row1"></div>
+            <div class="square u row1"></div>
+            <div class="square p row1"></div>
+            <div class="square t row1 corner diagonal2"></div>
+            <div class="square e row2"></div>
+            <div class="square r row2 diagonal1"></div>
+            <div class="square u row2"></div>
+            <div class="square p row2 diagonal2"></div>
+            <div class="square t row2"></div>
+            <div class="square e row3"></div>
+            <div class="square r row3"></div>
+            <div class="square free u row3 diagonal1 diagonal2">Volcano Erupts</div>
+            <div class="square p row3"></div>
+            <div class="square t row3"></div>
+            <div class="square e row4"></div>
+            <div class="square r row4 diagonal2"></div>
+            <div class="square u row4"></div>
+            <div class="square p row4 diagonal1"></div>
+            <div class="square t row4"></div>
+            <div class="square e row5 corner diagonal2"></div>
+            <div class="square r row5"></div>
+            <div class="square u row5"></div>
+            <div class="square p row5"></div>
+            <div class="square t row5 corner diagonal1"></div>
+        </div>
+    </div>
+    <div id="counter">
+        <div>Eruption Level</div>
+        <div id="count">VEI 0</div>
+        <div id="indicator">Kilauea</div>
+    </div>
+    <h3>Instructions</h3>
+        <ul>
+            <li>Pick any volcano disaster movie, for suggestions check out <a href="./suggestions">this list</a>.</li>
+            <li>Click on a squares as the events occur in the movie.</li>
+            <li>Yell "Eruption" when every square in a row, column, diagonal, or four corners is highlighted.</li>
+            <li>Pause the movie and share each of the squares you've checked.</li>
+            <li>Each erupution raises your explosivity index (VEI) by 1 point.</li>
+            <li>The player with the highest explosivity index at the end of the movie wins.</li>
+
+        </ul>
+    <script src="./index.js"></script>
+</body>
+</html>
