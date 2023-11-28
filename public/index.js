@@ -111,3 +111,23 @@ function removeClassFromClass(divClass, addClass){
         if (workingClass[i].classList.contains(addClass)){workingClass[i].classList.remove(addClass);};
     }
 }
+
+
+//Control Button Functions
+function newCard(){
+    location.reload()
+}
+
+function clearSelected(){
+    removeClassFromClass(".selected","selected");
+    calculateVEI();
+    updateEruptionColumnHeight();
+}
+
+function toggleDarkMode(){
+    console.log("Dark mode button clicked");
+}
+
+function toggleBigMode(){
+    console.log("Big Mode Button Clicked");
+}
