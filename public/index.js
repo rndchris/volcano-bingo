@@ -50,7 +50,13 @@ function calculateVEI(){
     let lastVEI = VEI
     VEI = 0
     for (var i = 0; i<eruptions.length; i++){
-        if (checkErupt(eruptions[i]) === true){VEI++;}
+        removeClassFromClass(eruptions[i],"erupted")
+    }
+    for (var i = 0; i<eruptions.length; i++){
+        if (checkErupt(eruptions[i]) === true){
+            VEI++;
+            addClassToClass(eruptions[i],"erupted")
+        }
     }
     siteVEI.innerHTML = "VEI " + VEI;
     switch(VEI) {
@@ -73,7 +79,7 @@ function calculateVEI(){
             indicator.innerHTML = "Sub-Plinian, Plinian"
             break;
         case 6:
-            indicator.innerHTML = "Big Plinian"
+            indicator.innerHTML = "Plinian"
             break;
         case 7:
             indicator.innerHTML = "Ultra-Plinian"
@@ -82,7 +88,7 @@ function calculateVEI(){
             indicator.innerHTML = "Really?, Ultra-Plinean"
             break;
         default:
-          indicator.innerHTML = "Apocolyptic";
+          indicator.innerHTML = "Apocalyptic";
       }
     if (lastVEI < VEI){console.log("ERUPTION!!!!!!");}
 }
@@ -90,4 +96,18 @@ function calculateVEI(){
 function updateEruptionColumnHeight(){
     var eruptionColumnHeight = (document.querySelectorAll(".selected").length * 1.6).toFixed(1);
     document.querySelector("#eruption-column-height").innerHTML = "Eruption Column: " + eruptionColumnHeight + " km";
+}
+
+function addClassToClass(divClass, addClass){
+    let workingClass = document.querySelectorAll(divClass);
+    for (let i = 0; i < workingClass.length; i++){
+        workingClass[i].classList.add(addClass);
+    }
+}
+
+function removeClassFromClass(divClass, addClass){
+    let workingClass = document.querySelectorAll(divClass);
+    for (let i = 0; i < workingClass.length; i++){
+        if (workingClass[i].classList.contains(addClass)){workingClass[i].classList.remove(addClass);};
+    }
 }

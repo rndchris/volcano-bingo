@@ -8,6 +8,14 @@ h2{
     text-align: center;
 }
 
+#controls{
+    margin-top: 30px;
+    gap: 30px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
 #banner{
     display: flex;
     position: relative;
@@ -16,6 +24,7 @@ h2{
     justify-items: center;
     flex-direction: column;
     rotate: -30deg;
+    text-align: center;
 }
 .cardbox{
     display: flex;
