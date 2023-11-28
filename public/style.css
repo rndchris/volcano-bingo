@@ -1,13 +1,33 @@
+h1{
+    font-size: 5vh;
+    margin: 0
+}
+
+h2{
+    margin: 0;
+    text-align: center;
+}
+
+#banner{
+    display: flex;
+    position: relative;
+    top: 0;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    rotate: -30deg;
+}
 .cardbox{
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .card{
     display: inline-grid;
-    height: 80vh;
-    width: 80vh;
+    min-height: 90vh;
+    width: 100vh;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: .25fr 1fr 1fr 1fr 1fr 1fr;
     border: solid black;
@@ -20,6 +40,8 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    font-size: large;
+    padding: 1vh;
 }
 
 .header{
@@ -40,7 +62,6 @@
 #counter{
     border: solid black;
     display: flex;
-    position: absolute;
     top: 30px;
     right: 30px;
     flex-direction: column;
@@ -72,4 +93,33 @@
 #vei4{
     font-weight: bold;
     color: red
+}
+
+.free{
+    color: darkred;
+    font-weight: bolder;
+    font-style: italic;
+    font-size: x-large;
+}
+
+@media (max-aspect-ratio: 4/3){
+    .cardbox{
+        flex-direction: column;
+    }
+
+    #banner{
+        rotate: 0deg;
+    }
+
+    .card{
+        width: 97vw;
+        min-height: 97vw;
+    }
+
+    #counter{
+        position: fixed;
+        top: 2vh;
+        right: 2vw;
+        background-color: white;
+    }
 }

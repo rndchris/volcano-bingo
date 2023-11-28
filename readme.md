@@ -14,3 +14,6 @@
 2. to
 3. be
 4. written
+
+## Configuration Options
+- Edit the tropes.txt file to add/remove tropes that appear on cards.

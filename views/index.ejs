@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div id="banner">
-        <h1>ERUPT!</h1>
-        <h2>Volcano Disaster Movie Bingo</h2>
-    </div>
     <div class="cardbox">
+        
+        <div id="banner">
+            <h1>ERUPT!</h1>
+            <h2>Volcano Disaster Movie Bingo</h2>
+        </div>
+
         <div class="card">
             <div class="square header">E</div>
             <div class="square header">R</div>
@@ -44,11 +46,12 @@
             <div class="square p row5"><%= trope[22] %></div>
             <div class="square t row5 corner diagonal1"><%= trope[23] %></div>
         </div>
-    </div>
-    <div id="counter">
-        <div>Eruption Level</div>
-        <div id="count">VEI 0</div>
-        <div id="indicator">Kilauea</div>
+
+        <div id="counter">
+            <div>Eruption Level</div>
+            <div id="count">None</div>
+            <div id="indicator">Dormant</div>
+        </div>
     </div>
     <h3>Instructions</h3>
         <ul>
@@ -56,7 +59,7 @@
             <li>Click on a squares as the events occur in the movie.</li>
             <li>Yell "Eruption" when every square in a row, column, diagonal, or four corners is highlighted.</li>
             <li>Pause the movie and share each of the squares you've checked.</li>
-            <li>Each erupution raises your explosivity index (VEI) by 1 point.</li>
+            <li>Each eruption raises your explosivity index (VEI) by 1 point.</li>
             <li>The player with the highest explosivity index at the end of the movie wins.</li>
 
         </ul>

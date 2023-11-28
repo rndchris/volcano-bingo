@@ -1,5 +1,6 @@
-square = document.querySelectorAll(".square");
-siteVEI = document.querySelector("#count");
+var square = document.querySelectorAll(".square");
+var siteVEI = document.querySelector("#count");
+var indicator = document.querySelector("#indicator");
 
 var VEI = 0;
 
@@ -34,11 +35,11 @@ for (var i = 0; i<square.length; i++){
 
 //Generate bingo card text
 //Actually, this might be better rendered using a server side model.
-for (var i = 0; i<square.length; i++){
-    if (square[i].classList.contains("square") && !square[i].classList.contains("free") && !square[i].classList.contains("header")){
-        square[i].innerHTML = "Character almost falls into lava";
-    }
-}
+//for (var i = 0; i<square.length; i++){
+//    if (square[i].classList.contains("square") && !square[i].classList.contains("free") && !square[i].classList.contains("header")){
+//        square[i].innerHTML = "Character almost falls into lava";
+//    }
+//}
 
 //Win detection
 function checkErupt(eruptMethod){
@@ -59,5 +60,36 @@ function calculateVEI(){
         if (checkErupt(eruptions[i]) === true){VEI++;}
     }
     siteVEI.innerHTML = "VEI " + VEI;
+    switch(VEI) {
+        case 0:
+            indicator.innerHTML = "Hawaiian";
+            break;
+        case 1:
+            indicator.innerHTML = "Strombolian"
+            break;
+        case 2:
+            indicator.innerHTML = "Vulcanian"
+            break;
+        case 3:
+            indicator.innerHTML = "Peléan, Sub-Plinian"
+            break;
+        case 4:
+            indicator.innerHTML = "Sub-Plian"
+            break;
+        case 5:
+            indicator.innerHTML = "Sub-Plinian, Plinian"
+            break;
+        case 6:
+            indicator.innerHTML = "Big Plinian"
+            break;
+        case 7:
+            indicator.innerHTML = "Ultra-Plinian"
+            break;
+        case 8:
+            indicator.innerHTML = "Really?, Ultra-Plinean"
+            break;
+        default:
+          indicator.innerHTML = "Apocolyptic";
+      }
     if (lastVEI < VEI){console.log("ERUPTION!!!!!!");}
 }
