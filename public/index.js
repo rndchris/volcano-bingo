@@ -29,6 +29,7 @@ for (var i = 0; i<square.length; i++){
             this.classList.add("selected");
         }
         calculateVEI();
+        updateEruptionColumnHeight();
     })
     
 }
@@ -92,4 +93,9 @@ function calculateVEI(){
           indicator.innerHTML = "Apocolyptic";
       }
     if (lastVEI < VEI){console.log("ERUPTION!!!!!!");}
+}
+
+function updateEruptionColumnHeight(){
+    var eruptionColumnHeight = (document.querySelectorAll(".selected").length * 1.6).toFixed(1);
+    document.querySelector("#eruption-column-height").innerHTML = "Eruption Column: " + eruptionColumnHeight + " km";
 }
