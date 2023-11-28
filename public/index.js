@@ -34,14 +34,6 @@ for (var i = 0; i<square.length; i++){
     
 }
 
-//Generate bingo card text
-//Actually, this might be better rendered using a server side model.
-//for (var i = 0; i<square.length; i++){
-//    if (square[i].classList.contains("square") && !square[i].classList.contains("free") && !square[i].classList.contains("header")){
-//        square[i].innerHTML = "Character almost falls into lava";
-//    }
-//}
-
 //Win detection
 function checkErupt(eruptMethod){
     var checkSquares = document.querySelectorAll(eruptMethod);
