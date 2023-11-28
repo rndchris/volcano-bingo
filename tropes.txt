@@ -31,7 +31,7 @@ Person gets burned
 Rich investor that would be scared off by news of a possible volanic eruption
 Confrontation about a previous incorrect eruption prediction
 Character(s) must climb on top of vehicle
-Characters says to leave them behind
+Character says to leave them behind
 Escape volcanic hazard by boat
 Dead trees from CO2
 Old abandoned mines
@@ -68,3 +68,5 @@ Dead Wildlife
 Character finds excuse to go to volcano while it is actively erupting
 Scientist has a wacky, discredited volcano science idea
 Change in hydrothermal feature activity
+Lavafall (Waterfall of lava)
+Geyser or other hydrothermal feature erupts lava
