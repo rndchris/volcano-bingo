@@ -1,6 +1,19 @@
+//basic elements
 var square = document.querySelectorAll(".square");
 var siteVEI = document.querySelector("#count");
 var indicator = document.querySelector("#indicator");
+
+var soundpaths = [
+    "./assets/audio/dante-mountain-blowing-up.aac",
+    "./assets/audio/terror-peak-evacuation.aac",
+    "./assets/audio/terror-peak-get-off-mountain.aac"
+]
+function eruptionSound(){
+    let soundNumber = Math.floor(Math.random() * soundpaths.length);
+    var audio = new Audio(soundpaths[soundNumber]);
+    audio.play()
+}
+
 
 var VEI = 0;
 
@@ -90,7 +103,10 @@ function calculateVEI(){
         default:
           indicator.innerHTML = "Apocalyptic";
       }
-    if (lastVEI < VEI){console.log("ERUPTION!!!!!!");}
+    if (lastVEI < VEI){
+        console.log("ERUPTION!!!!!!");
+        eruptionSound();
+    }
 }
 
 function updateEruptionColumnHeight(){
@@ -130,4 +146,8 @@ function toggleDarkMode(){
 
 function toggleBigMode(){
     console.log("Big Mode Button Clicked");
+}
+
+function toggleMute(){
+    console.log("Mute Button Clicked");
 }

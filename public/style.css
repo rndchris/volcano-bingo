@@ -66,6 +66,16 @@ h2{
 
 .erupted{
     background-color: orangered;
+    animation-name: eruption;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-direction: forwards;
+}
+
+@keyframes eruption {
+    0% {background-color: red;}
+    50% {background-color: yellow;}
+    100% {background-color: orangered;}
 }
 
 #counter{

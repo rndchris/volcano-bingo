@@ -60,6 +60,7 @@
             <button onclick="clearSelected()">Clear Selected</button>
             <button id="darkMode" onclick="toggleDarkMode()">Dark Mode</button>
             <button id="bigMode" onclick="toggleBigMode()">Big Mode</button>
+            <button id="mute" onclick="toggleMute()">Mute</button>
             <button onclick="newCard()">New Bingo Card</button>
         </div>
     </div>
@@ -83,5 +84,8 @@
         </ol>
     <h3>Refreshing the page generates a new bingo card. Bingo cards are randomly generated.</h3>
     <script src="./index.js"></script>
+    <audio id="blowing-up">
+        <source src="./assets/audio/dante-mountain-blowing-up.aac" type="audo/aac">
+    </audio>
 </body>
 </html>
