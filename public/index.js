@@ -9,7 +9,7 @@ var soundpaths = [
     "./assets/audio/terror-peak-get-off-mountain.aac"
 ]
 function eruptionSound(){
-    if (document.querySelector("#mute").innerHTML === "Mute"){
+    if (document.querySelector("#mute").innerHTML === "Turn Sound Off"){
         let soundNumber = Math.floor(Math.random() * soundpaths.length);
         var audio = new Audio(soundpaths[soundNumber]);
         audio.play()
@@ -143,18 +143,51 @@ function clearSelected(){
 }
 
 function toggleDarkMode(){
-    console.log("Dark mode button clicked");
+    let button = document.getElementById("darkMode");
+    toggleText(button,"Light Mode", "Dark Mode")
+    toggleClassOnClass(".square","darkSquare");
+    toggleClassOnClass(".card","darkSquare");
+    toggleClassOnClass("html","dark");
+    toggleClassOnClass("#counter","darkSquare");
+    toggleClassOnClass("#counter","dark");
+    toggleClassOnClass("button","darkSquare");
+    toggleClassOnClass("button","dark");
 }
 
 function toggleBigMode(){
-    console.log("Big Mode Button Clicked");
+    let button = document.getElementById("bigMode");
+    toggleText(button,"Big Mode", "Turn Off Big Mode")
+    toggleClassOnClass(".square","big");
+    toggleClassOnClass(".card","bigCard");
+    toggleClassOnClass(".cardbox","bigCardBox");
+    toggleClassOnClass("#banner","hidden");
+    toggleClassOnClass("#counter","bigCounter");
 }
 
 function toggleMute(){
     let muteState = document.getElementById("mute");
-    if (muteState.innerHTML == "Mute"){
-        muteState.innerHTML = "Unmute";
+    toggleText(muteState, "Turn Sound Off", "Turn Sound On");
+}
+
+function toggleClass(pageElement, divClass){
+    if (pageElement.classList.contains(divClass)){
+        pageElement.classList.remove(divClass);
     } else {
-        muteState.innerHTML = "Mute";
+        pageElement.classList.add(divClass);
+    }
+}
+
+function toggleClassOnClass(divClass,classToggle){
+    let workingClass = document.querySelectorAll(divClass);
+    for (let i = 0; i < workingClass.length; i++){
+        toggleClass(workingClass[i],classToggle);
+    }
+}
+
+function toggleText(button, text1, text2){
+    if (button.innerHTML == text1){
+        button.innerHTML = text2;
+    } else {
+        button.innerHTML = text1;
     }
 }

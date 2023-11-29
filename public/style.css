@@ -8,12 +8,28 @@ h2{
     text-align: center;
 }
 
+li{
+    font-size: large;
+}
+
+.cardwindow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 #controls{
     margin-top: 30px;
     gap: 30px;
     display: flex;
     justify-items: center;
     align-items: center;
+}
+
+button{
+    border-radius: 5px;
+    font-size: large;
 }
 
 #banner{
@@ -40,6 +56,7 @@ h2{
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: .25fr 1fr 1fr 1fr 1fr 1fr;
     border: solid black;
+    border-radius: 5px;
 }
 
 .square{
@@ -62,6 +79,7 @@ h2{
 
 .selected{
     background-color: red;
+    color: black;
 }
 
 .erupted{
@@ -79,7 +97,6 @@ h2{
 }
 
 #counter{
-    border: solid black;
     display: flex;
     top: 30px;
     right: 30px;
@@ -88,6 +105,11 @@ h2{
     align-items: center;
     width: 200px;
     font-size: large;
+}
+
+.counter{
+    border: solid black;
+    background-color: white;
 }
 
 #count{
@@ -139,6 +161,37 @@ h2{
         position: fixed;
         top: 2vh;
         right: 2vw;
-        background-color: white;
     }
+}
+
+.dark{
+    background-color: black;
+    color: green;
+}
+
+.darkSquare{
+    border: solid darkslategray;
+}
+
+.big{
+    font-size: x-large;
+}
+
+.bigCard{
+    height: 85vh;
+    width: 90vw;
+}
+
+.bigCardBox{
+    flex-direction: column;
+}
+
+.bigCounter{
+    position: fixed !important;
+    top: 3vh !important;
+    right: 3vh !important;
+}
+
+.hidden{
+    display: none !important;
 }
