@@ -9,9 +9,11 @@ var soundpaths = [
     "./assets/audio/terror-peak-get-off-mountain.aac"
 ]
 function eruptionSound(){
-    let soundNumber = Math.floor(Math.random() * soundpaths.length);
-    var audio = new Audio(soundpaths[soundNumber]);
-    audio.play()
+    if (document.querySelector("#mute").innerHTML === "Mute"){
+        let soundNumber = Math.floor(Math.random() * soundpaths.length);
+        var audio = new Audio(soundpaths[soundNumber]);
+        audio.play()
+    }
 }
 
 
@@ -149,5 +151,10 @@ function toggleBigMode(){
 }
 
 function toggleMute(){
-    console.log("Mute Button Clicked");
+    let muteState = document.getElementById("mute");
+    if (muteState.innerHTML == "Mute"){
+        muteState.innerHTML = "Unmute";
+    } else {
+        muteState.innerHTML = "Mute";
+    }
 }
