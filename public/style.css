@@ -55,6 +55,7 @@ button{
     animation-name: fadein;
     animation-duration: 1s;
     animation-direction: normal;
+    user-select: none;
 }
 .cardbox{
     display: flex;
