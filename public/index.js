@@ -66,6 +66,7 @@ function calculateVEI(){
     VEI = 0
     for (var i = 0; i<eruptions.length; i++){
         removeClassFromClass(eruptions[i],"erupted")
+        removeClassFromClass(eruptions[i],"erupting")
     }
     for (var i = 0; i<eruptions.length; i++){
         if (checkErupt(eruptions[i]) === true){
@@ -108,6 +109,11 @@ function calculateVEI(){
     if (lastVEI < VEI){
         console.log("ERUPTION!!!!!!");
         eruptionSound();
+        for (var i = 0; i<eruptions.length; i++){
+            if (checkErupt(eruptions[i]) === true){
+                addClassToClass(eruptions[i],"erupting")
+            }
+        }
     }
 }
 
@@ -192,8 +198,13 @@ function showRules(){
     toggleClassOnClass(".rules","hidden")
     toggleClassOnClass(".card","hidden")
     toggleClassOnClass("#controls","hidden")
-    toggleClassOnClass("#banner","hidden")
+    //toggleClassOnClass("#banner","hidden")
     toggleClassOnClass("#counter","hidden")
+    if (document.querySelector(".square").classList.contains("big") || document.querySelector("#controls").classList.contains("hidden")){
+        addClassToClass("#banner","hidden");
+    } else {
+        removeClassFromClass("#banner","hidden")
+    }
 }
 
 function toggleText(button, text1, text2){

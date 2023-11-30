@@ -106,6 +106,10 @@ button{
 
 .erupted{
     background-color: orangered;
+    animation: none;
+}
+
+.erupting{
     animation-name: eruption;
     animation-duration: 2s;
     animation-iteration-count: 1;
@@ -206,6 +210,30 @@ button{
     height: 100px;
 }
 
+.big{
+    font-size: x-large;
+}
+
+.bigCard{
+    height: 85vh;
+    width: 90vw;
+}
+
+.bigCardBox{
+    flex-direction: column;
+}
+
+.bigCounter{
+    position: fixed;
+    top: 0px !important;
+    right: 0px !important;
+    flex-direction: row !important;
+    width: auto !important;
+    height: 2vh !important;
+    gap: 20px !important;
+    padding: 10px !important;
+}
+
 @media (max-aspect-ratio: 4/3){
     .cardbox{
         flex-direction: column;
@@ -264,6 +292,7 @@ button{
 }
 
 .darkHtml{
+    /*Image sourced from USGS -- Public Domain*/
     background-image: url(./assets/images/kilauea-night.jpg);
 }
 
@@ -275,31 +304,6 @@ button{
         color: green;
     }
 }
-
-.big{
-    font-size: x-large;
-}
-
-.bigCard{
-    height: 85vh;
-    width: 90vw;
-}
-
-.bigCardBox{
-    flex-direction: column;
-}
-
-.bigCounter{
-    position: fixed;
-    top: 0px !important;
-    right: 0px !important;
-    flex-direction: row !important;
-    width: auto !important;
-    height: 2vh !important;
-    gap: 20px !important;
-    padding: 10px !important;
-}
-
 
 .free{
     color: darkred;
@@ -315,6 +319,16 @@ button{
     color: red;
     font-weight: bolder;
     font-family: serif;
+}
+
+@media print {
+    #controls{
+        display: none;
+    }
+
+    #counter{
+        display: none;
+    }
 }
 
 .hidden{
