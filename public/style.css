@@ -93,6 +93,14 @@ button{
 .selected{
     background-color: red;
     color: black;
+    animation-name: fadeSelect;
+    animation-duration: .5s;
+    animation-direction: normal;
+}
+
+@keyframes fadeSelect {
+    0% {background-color: rgba(0, 0, 0, 0);}
+    100% {background-color: red;}
 }
 
 .erupted{
@@ -193,6 +201,10 @@ button{
     padding: 0;
 }
 
+.rules button{
+    height: 100px;
+}
+
 @media (max-aspect-ratio: 4/3){
     .cardbox{
         flex-direction: column;
@@ -208,9 +220,11 @@ button{
     }
 
     #counter{
-        position: fixed;
+        /*position: fixed;
         top: 2vh;
-        right: 2vw;
+        right: 2vw;*/
+        width: 90vw;
+        margin-top: 20px;
     }
 
     #bigMode{
@@ -223,6 +237,16 @@ button{
 
     .header{
         font-size: xx-large
+    }
+
+    #controls{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #controls button{
+        width: 80vw;
+        height: 5vh;
     }
 }
 
@@ -270,7 +294,7 @@ button{
     right: 0px !important;
     flex-direction: row !important;
     width: auto !important;
-    height: 40px !important;
+    height: 2vh !important;
     gap: 20px !important;
     padding: 10px !important;
 }
