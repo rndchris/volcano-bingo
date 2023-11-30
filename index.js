@@ -5,6 +5,7 @@ import fs from "fs"
 const app = express();
 const port = 3500;
 global.tropes = []
+var cardCounter = 0
 
 fs.readFile("./tropes.txt", "utf8", (err, data) => {
     if (err) throw err;
@@ -17,7 +18,8 @@ app.use(serveStatic("public"));
 
 app.get("/", (req,res) => {
     let squares = generateCard();
-    console.log(req.ip + " Requested a Bingo Card");
+    cardCounter++;
+    console.log(req.ip + " Requested a Bingo Card. " + cardCounter + " total cards requested since last restart.");
     res.render("index.ejs", {trope: squares});
 })
 
