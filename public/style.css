@@ -28,11 +28,13 @@ h2{
 
 #controls{
     margin-top: 20px;
-    margin-bottom: 30px;
     gap: 30px;
     display: flex;
     justify-items: center;
     align-items: center;
+    animation-name: fadein;
+    animation-duration: 1s;
+    animation-direction: normal;
 }
 
 button{
@@ -50,6 +52,9 @@ button{
     flex-direction: column;
     rotate: -30deg;
     text-align: center;
+    animation-name: fadein;
+    animation-duration: 1s;
+    animation-direction: normal;
 }
 .cardbox{
     display: flex;
@@ -68,6 +73,9 @@ button{
     border: solid black;
     border-radius: 5px;
     opacity: .80;
+    animation-name: fadein;
+    animation-duration: 1s;
+    animation-direction: normal;
 }
 
 .square{
@@ -117,10 +125,19 @@ button{
     background-color: white;
     border-radius: 5px;
     opacity: .8;
+    animation-name: fadein;
+    animation-duration: 1s;
+    animation-direction: normal;
 }
 
 #count{
     font-size: xx-large;
+    margin-bottom: 10px;
+}
+
+#eruption-column-height{
+    margin-bottom: 10px;
+    font-size: x-large
 }
 
 #vei1{
@@ -154,6 +171,14 @@ button{
     border-radius: 20px;
     opacity: .8;
     padding: 20px;
+    animation-name: fadein;
+    animation-duration: 1s;
+    animation-direction: normal;
+}
+
+@keyframes fadein {
+    0% {opacity: 0;}
+    100% {opacity: .8;}
 }
 
 .rules > ol > li{
@@ -204,6 +229,9 @@ button{
 .dark{
     background-color: black;
     color: green;
+    animation-name: darkFade;
+    animation-duration: .25s;
+    animation-direction: normal;
 }
 
 .darkSquare{
@@ -212,6 +240,15 @@ button{
 
 .darkHtml{
     background-image: url(./assets/images/kilauea-night.jpg);
+}
+
+@keyframes darkFade {
+    0% {background-color: whitesmoke;
+        color:black
+    }
+    100% {background-color: black;
+        color: green;
+    }
 }
 
 .big{
@@ -228,9 +265,14 @@ button{
 }
 
 .bigCounter{
-    position: fixed !important;
-    top: 3vh !important;
-    right: 3vh !important;
+    position: fixed;
+    top: 0px !important;
+    right: 0px !important;
+    flex-direction: row !important;
+    width: auto !important;
+    height: 40px !important;
+    gap: 20px !important;
+    padding: 10px !important;
 }
 
 

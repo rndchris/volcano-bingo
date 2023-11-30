@@ -113,7 +113,7 @@ function calculateVEI(){
 
 function updateEruptionColumnHeight(){
     var eruptionColumnHeight = (document.querySelectorAll(".selected").length * 1.6).toFixed(1);
-    document.querySelector("#eruption-column-height").innerHTML = "Eruption Column: " + eruptionColumnHeight + " km";
+    document.querySelector("#eruption-column-height").innerHTML = eruptionColumnHeight + " km";
 }
 
 function addClassToClass(divClass, addClass){
@@ -186,6 +186,14 @@ function toggleClassOnClass(divClass,classToggle){
     for (let i = 0; i < workingClass.length; i++){
         toggleClass(workingClass[i],classToggle);
     }
+}
+
+function showRules(){
+    toggleClassOnClass(".rules","hidden")
+    toggleClassOnClass(".card","hidden")
+    toggleClassOnClass("#controls","hidden")
+    toggleClassOnClass("#banner","hidden")
+    toggleClassOnClass("#counter","hidden")
 }
 
 function toggleText(button, text1, text2){
