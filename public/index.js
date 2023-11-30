@@ -147,11 +147,15 @@ function toggleDarkMode(){
     toggleText(button,"Light Mode", "Dark Mode")
     toggleClassOnClass(".square","darkSquare");
     toggleClassOnClass(".card","darkSquare");
+    toggleClassOnClass(".card", "dark");
     toggleClassOnClass("html","dark");
     toggleClassOnClass("#counter","darkSquare");
-    toggleClassOnClass("#counter","dark");
+    toggleClassOnClass("#counter","dark");  
     toggleClassOnClass("button","darkSquare");
     toggleClassOnClass("button","dark");
+    toggleClassOnClass(".rules","dark");
+    toggleClassOnClass(".rules","darkSquare");
+    toggleClassOnClass("html","darkHtml")
 }
 
 function toggleBigMode(){
