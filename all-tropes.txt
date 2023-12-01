@@ -74,7 +74,7 @@ Birds/Wildlife fly/run away immediately before eruption
 Bad CGI Death
 Romance forged by volcanic trauma
 Death by being set on fire
-Chracter must make daring jump to safety
+Character must make daring jump to safety
 Spooky underwater boiling/lava scene
 Death by lava
 Helicopter destroyed
@@ -100,7 +100,7 @@ Discussiong of post-eruption vacation plans
 Pet Rescued
 Hydrothermal feature erupts lava instead of water
 Character tells story of another volcanic eruption
-Charcter explains accurate eruption predictions are difficult
+Character explains accurate eruption predictions are difficult
 Wildlife missing or behaving strangely
 Dead Wildlife
 Lava tube
@@ -116,3 +116,5 @@ Change in hydrothermal feature activity
 Character falls off or dies on bridge
 Lavafall (Waterfall of lava)
 Geyeser erupts lava
+Clearly fake coughing
+Scientist looks at seismometer graph

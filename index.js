@@ -19,7 +19,7 @@ app.use(serveStatic("public"));
 app.get("/", (req,res) => {
     let squares = generateCard();
     cardCounter++;
-    console.log(req.ip + " Requested a Bingo Card. " + cardCounter + " total cards requested since last restart.");
+    console.log(Date() + req.ip + " Requested a Bingo Card. " + cardCounter + " total cards requested since last restart.");
     res.render("index.ejs", {trope: squares});
 })
 
