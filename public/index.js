@@ -109,10 +109,16 @@ function calculateVEI(){
     if (lastVEI < VEI){
         console.log("ERUPTION!!!!!!");
         eruptionSound();
-        for (var i = 0; i<eruptions.length; i++){
-            if (checkErupt(eruptions[i]) === true){
-                addClassToClass(eruptions[i],"erupting")
-            }
+        resetEruption();
+    }
+}
+
+function resetEruption(){
+    for (var i = 0; i<eruptions.length; i++){
+        if (checkErupt(eruptions[i]) === true){
+            //This function depends on the erupting class being removed in calculateVEI
+            void document.querySelector(".erupted").offsetWidth;
+            addClassToClass(eruptions[i],"erupting")
         }
     }
 }

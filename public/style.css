@@ -106,7 +106,7 @@ button{
 
 .erupted{
     background-color: orangered;
-    animation: none;
+    animation-name: none;
 }
 
 .erupting{
@@ -328,6 +328,14 @@ button{
 
     #counter{
         display: none;
+    }
+
+    .square{
+        color: black;
+    }
+
+    h2{
+        color: black;
     }
 }
 
