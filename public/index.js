@@ -6,7 +6,11 @@ var indicator = document.querySelector("#indicator");
 var soundpaths = [
     "./assets/audio/dante-mountain-blowing-up.aac",
     "./assets/audio/terror-peak-evacuation.aac",
-    "./assets/audio/terror-peak-get-off-mountain.aac"
+    "./assets/audio/terror-peak-get-off-mountain.aac",
+    "./assets/audio/vfom-feel-it.aac",
+    "./assets/audio/vfom-imminent-eruption.aac",
+    "./assets/audio/vfom-pyroclastic-what.aac",
+    "./assets/audio/vfom-wall-of-lava.aac",
 ]
 function eruptionSound(){
     if (document.querySelector("#mute").innerHTML === "Turn Sound Off"){
