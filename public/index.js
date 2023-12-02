@@ -4,13 +4,24 @@ var siteVEI = document.querySelector("#count");
 var indicator = document.querySelector("#indicator");
 
 var soundpaths = [
+    "./assets/audio/dante-sing.aac",
     "./assets/audio/dante-mountain-blowing-up.aac",
     "./assets/audio/terror-peak-evacuation.aac",
     "./assets/audio/terror-peak-get-off-mountain.aac",
+    "./assets/audio/terror-peak-puff.aac",
+    "./assets/audio/terror-peak-not-an-earthquake.aac",
+    "./assets/audio/terror-peak-danger.aac",
     "./assets/audio/vfom-feel-it.aac",
     "./assets/audio/vfom-imminent-eruption.aac",
     "./assets/audio/vfom-pyroclastic-what.aac",
     "./assets/audio/vfom-wall-of-lava.aac",
+    "./assets/audio/supervolcano-vei8.aac",
+    "./assets/audio/supervolcano-panic.aac",
+    "./assets/audio/supervolcano-eruption.aac",
+    "./assets/audio/supereruption-swelling.aac",
+    "./assets/audio/supereruption-yellowstone.aac",
+    "./assets/audio/supereruption-geyser.aac",
+    "./assets/audio/supereruption-get-out.aac",
 ]
 function eruptionSound(){
     if (document.querySelector("#mute").innerHTML === "Turn Sound Off"){
