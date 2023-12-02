@@ -38,7 +38,6 @@ Landslide, rockslide, or avalanche
 Building or vehicle hit by lava bomb
 Rescued by helicopter in the nick of time
 Pumice
-Vehicle on fire
 Character sends spouse/family away for fear of eruption
 Person trapped in vehicle
 Person almost falls into lava, but doesn't
@@ -47,7 +46,6 @@ Ominous pre-eruption earthquake
 Dead fish
 Characters shelter in cave, bunker, mines, or basement
 Scientist was wrong about a previous eruption prediction
-Bad CGI Death
 Romance forged by volcanic trauma
 Chracter must make daring jump to safety
 Spooky underwater boiling/lava scene
@@ -64,7 +62,6 @@ Character tells story of another volcanic eruption
 Character explains accurate eruption predictions are difficult
 Dead Wildlife
 Character finds excuse to go to volcano while it is actively erupting
-Scientist has a wacky, discredited volcano science idea
 Change in hydrothermal feature activity
 Lavafall (Waterfall of lava)
 Geyser or other hydrothermal feature erupts lava
@@ -72,3 +69,4 @@ Clearly fake coughing
 Scientist looks at seismometer graph
 Traffic jam
 Wildlife missing or behaving strangely
+Car speeding away from pyroclastic flow
