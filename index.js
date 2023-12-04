@@ -11,6 +11,9 @@ fs.readFile("./tropes.txt", "utf8", (err, data) => {
     if (err) throw err;
     tropes = data.split('\n');
     console.log(tropes.length + " tropes loaded");
+    if (tropes.length<24){
+        throw "Insufficient tropes for bingo card generation";
+    }
 })
 
 app.use(serveStatic("public"));
