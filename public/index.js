@@ -13,8 +13,6 @@ var soundpaths = [
     "./assets/audio/terror-peak-danger.aac",
     "./assets/audio/vfom-feel-it.aac",
     "./assets/audio/vfom-imminent-eruption.aac",
-    "./assets/audio/vfom-pyroclastic-what.aac",
-    "./assets/audio/vfom-wall-of-lava.aac",
     "./assets/audio/supervolcano-vei8.aac",
     "./assets/audio/supervolcano-panic.aac",
     "./assets/audio/supervolcano-eruption.aac",
@@ -23,6 +21,7 @@ var soundpaths = [
     "./assets/audio/supereruption-geyser.aac",
     "./assets/audio/supereruption-get-out.aac",
 ]
+
 function eruptionSound(){
     if (document.querySelector("#mute").innerHTML === "Turn Sound Off"){
         let soundNumber = Math.floor(Math.random() * soundpaths.length);
