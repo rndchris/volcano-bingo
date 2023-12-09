@@ -234,6 +234,10 @@ button{
     padding: 10px !important;
 }
 
+#hideButtons{
+    display: none;
+}
+
 @media (max-aspect-ratio: 4/3){
     .cardbox{
         flex-direction: column;
@@ -277,6 +281,15 @@ button{
         width: 80vw;
         height: 5vh;
     }
+
+    .hiddenControls{
+        display: none;
+    }
+
+    #hideButtons{
+        display: block;
+    }
+
 }
 
 .dark{

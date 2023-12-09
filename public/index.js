@@ -199,6 +199,11 @@ function toggleMute(){
     toggleText(muteState, "Turn Sound Off", "Turn Sound On");
 }
 
+function hideButtons(){
+    toggleText(document.getElementById("hideButtons"), "Minimize Controls", "Restore Controls");
+    toggleClassOnClass("#controls button", "hiddenControls");
+}
+
 function toggleClass(pageElement, divClass){
     if (pageElement.classList.contains(divClass)){
         pageElement.classList.remove(divClass);
