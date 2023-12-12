@@ -204,6 +204,11 @@ function hideButtons(){
     toggleClassOnClass("#controls button", "hiddenControls");
 }
 
+function toggleMovies(){
+    toggleClassOnClass(".rules","hidden");
+    toggleClassOnClass(".suggestions","hidden");
+}
+
 function toggleClass(pageElement, divClass){
     if (pageElement.classList.contains(divClass)){
         pageElement.classList.remove(divClass);

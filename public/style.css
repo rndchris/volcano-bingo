@@ -143,6 +143,22 @@ button{
     animation-direction: normal;
 }
 
+.suggestions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: x-large;
+    font-family: sans-serif;
+    border: solid black;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    opacity: .8;
+    padding: 20px;
+    animation-name: fadein;
+    animation-duration: 1s;
+    animation-direction: normal;
+}
+
 #count{
     font-size: xx-large;
     margin-bottom: 10px;
