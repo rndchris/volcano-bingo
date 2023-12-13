@@ -1,5 +1,17 @@
 # Erupt: Volcano Movie Bingo
-Bingo, for volcano disaster movies. Check out the live site at [https://volcano.bingo](https://volcano.bingo).
+Bingo, for volcano disaster movies..
+
+## Screenshots
+
+<img src="screenshots/light-mode.png" alt="Light Mode Screen Shoot" width="400"/>
+
+The search and add movies screen.
+
+<img src="screenshots/dark-mode.png" alt="Dark mode screen shot" width="400"/>
+
+The results screen.  
+
+<img src="screenshots/mobile.png" alt="Mobile browser screen shot" width="200"/>
 
 ## Installation
 
