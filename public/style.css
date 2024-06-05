@@ -203,6 +203,7 @@ button{
     animation-name: fadein;
     animation-duration: 1s;
     animation-direction: normal;
+    max-width: 50%;
 }
 
 @keyframes fadein {
@@ -304,6 +305,10 @@ button{
 
     #hideButtons{
         display: block;
+    }
+
+    .rules{
+        max-width: 95%;
     }
 
 }

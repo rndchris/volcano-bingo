@@ -47,7 +47,7 @@ app.get("/expanded", (req,res) => {
 app.get("/api/trope", (req,res) => {
     let rando = Math.floor(Math.random() * tropes.length);
     let trope = tropes[rando];
-    res.send(trope);
+    res.json(trope);
 })
 
 app.get("/api/tropes", (req,res) => {

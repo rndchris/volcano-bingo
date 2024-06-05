@@ -33,6 +33,11 @@ function eruptionSound(){
 
 var VEI = 0;
 
+var replaceCounter = 0;
+//set limit for number of replacements allowed
+var replaceLimit = 5;
+document.querySelector("#swapCounter").innerHTML = replaceLimit - replaceCounter;
+
 var eruptions = [
     ".e",
     ".r",
@@ -51,6 +56,7 @@ var eruptions = [
 
 //Add event listeners to every box for highlighting
 for (var i = 0; i<square.length; i++){
+    //add events listeners for selecting squares
     square[i].addEventListener("click", function(){
         if (this.classList.contains("selected")){
             this.classList.remove("selected");
@@ -59,6 +65,19 @@ for (var i = 0; i<square.length; i++){
         }
         calculateVEI();
         updateEruptionColumnHeight();
+    })
+
+    square[i].addEventListener("contextmenu", async function(event){
+        event.preventDefault()
+        if (this.classList.contains("header") || this.classList.contains("free")){return false;}
+        if (replaceCounter < replaceLimit){
+            this.innerHTML = await getTrope();
+            replaceCounter++
+            document.querySelector("#swapCounter").innerHTML = replaceLimit - replaceCounter;
+        } else {
+            alert("Uh oh, you've run out of replacements!")
+        }
+        return false;
     })
     
 }
@@ -243,4 +262,9 @@ function toggleText(button, text1, text2){
     } else {
         button.innerHTML = text1;
     }
+}
+
+async function getTrope(){
+    const trope = await fetch("/api/trope");
+    return trope.json();
 }
