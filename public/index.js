@@ -71,7 +71,7 @@ for (var i = 0; i<square.length; i++){
         event.preventDefault()
         if (this.classList.contains("header") || this.classList.contains("free")){return false;}
         if (replaceCounter < replaceLimit){
-            this.innerHTML = await getTrope();
+            this.innerHTML = await newTrope();
             replaceCounter++
             document.querySelector("#swapCounter").innerHTML = replaceLimit - replaceCounter;
         } else {
@@ -267,4 +267,23 @@ function toggleText(button, text1, text2){
 async function getTrope(){
     const trope = await fetch("/api/trope");
     return trope.json();
+}
+
+async function newTrope(){
+    let trope;
+    do {
+        trope = await getTrope();
+        console.log(trope);
+    }
+    while (!isTropeUnique(trope));
+    return trope;
+}
+
+function isTropeUnique(trope){
+    for (var i = 0; i<square.length; i++){
+        if (square[i].innerHTML == trope){
+            return false;
+        }
+    }
+    return true;
 }
