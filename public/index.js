@@ -26,7 +26,14 @@ function eruptionSound(){
     if (document.querySelector("#mute").innerHTML === "Turn Sound Off"){
         let soundNumber = Math.floor(Math.random() * soundpaths.length);
         var audio = new Audio(soundpaths[soundNumber]);
-        audio.play()
+        audio.play();
+    }
+}
+
+function swapSound(){
+    if (document.querySelector("#mute").innerHTML === "Turn Sound Off"){
+        var audio = new Audio("./assets/audio/ow-my-ankle.mp3");
+        audio.play();
     }
 }
 
@@ -35,7 +42,7 @@ var VEI = 0;
 
 var replaceCounter = 0;
 //set limit for number of replacements allowed
-var replaceLimit = 5;
+//var replaceLimit = 5;
 document.querySelector("#swapCounter").innerHTML = replaceLimit - replaceCounter;
 
 var eruptions = [
@@ -69,8 +76,9 @@ for (var i = 0; i<square.length; i++){
 
     square[i].addEventListener("contextmenu", async function(event){
         event.preventDefault()
-        if (this.classList.contains("header") || this.classList.contains("free")){return false;}
+        if (this.classList.contains("header") || this.classList.contains("free") || this.classList.contains("selected")){return false;}
         if (replaceCounter < replaceLimit){
+            swapSound();
             this.innerHTML = await newTrope();
             replaceCounter++
             document.querySelector("#swapCounter").innerHTML = replaceLimit - replaceCounter;

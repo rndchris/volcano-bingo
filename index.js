@@ -4,9 +4,10 @@ import fs from "fs"
 
 const app = express();
 const port = 3500;
-global.tropes = []
-global.allTropes = []
-var cardCounter = 0
+global.tropes = [];
+global.allTropes = [];
+var replaceLimit = 3;
+var cardCounter = 0;
 
 fs.readFile("./tropes.txt", "utf8", (err, data) => {
     if (err) throw err;
@@ -34,14 +35,14 @@ app.get("/", (req,res) => {
     let squares = generateCard();
     cardCounter++;
     console.log(Date() + req.ip + " Requested a Bingo Card. " + cardCounter + " total cards requested since last restart.");
-    res.render("index.ejs", {trope: squares});
+    res.render("index.ejs", {trope: squares, replaceLimit: replaceLimit});
 })
 
 app.get("/expanded", (req,res) => {
     let squares = generateExpandedCard();
     cardCounter++;
     console.log(Date() + req.ip + " Requested a Bingo Card. " + cardCounter + " total cards requested since last restart.");
-    res.render("index.ejs", {trope: squares});
+    res.render("index.ejs", {trope: squares, replaceLimit: replaceLimit});
 })
 
 app.get("/api/trope", (req,res) => {
@@ -57,6 +58,13 @@ app.get("/api/tropes", (req,res) => {
 app.get("/api/allTropes", (req,res) => {
     res.json(allTropes);
 })
+
+app.get("/setswaps/:number", async (req, res) => {
+    const swaps = parseInt(req.params.number);
+    replaceLimit = swaps;
+    res.json("Max swaps set");
+  
+  })
 
 app.listen(port,() =>{
     console.log("Listening on port " + port);
